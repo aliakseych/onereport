@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SolveIT — Профиль пользователя</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#304c41",
+              "on-error-container": "#410002",
+              "secondary-container": "#d6d4d3",
+              "secondary": "#5f5e5e",
+              "primary-fixed-dim": "#474747",
+              "inverse-on-surface": "#f3f0ef",
+              "surface-variant": "#e5e2e1",
+              "tertiary-fixed": "#486458",
+              "tertiary": "#254136",
+              "surface-dim": "#dcd9d9",
+              "on-secondary-container": "#1b1c1c",
+              "inverse-surface": "#313030",
+              "primary": "#000000",
+              "on-surface-variant": "#474747",
+              "error-container": "#ffdad6",
+              "surface-tint": "#5e5e5e",
+              "primary-container": "#3b3b3b",
+              "on-primary-container": "#ffffff",
+              "surface-container-low": "#f6f3f2",
+              "secondary-fixed-dim": "#acabab",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-container-highest": "#e5e2e1",
+              "surface-container": "#f0edec",
+              "on-tertiary-fixed": "#ffffff",
+              "secondary-fixed": "#c8c6c6",
+              "on-tertiary-fixed-variant": "#caeada",
+              "outline-variant": "#c6c6c6",
+              "error": "#ba1a1a",
+              "on-background": "#1c1b1b",
+              "surface-container-high": "#ebe7e7",
+              "surface-bright": "#fcf9f8",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#5e7b6e",
+              "surface": "#fcf9f8",
+              "on-surface": "#1c1b1b",
+              "inverse-primary": "#c6c6c6",
+              "primary-fixed": "#5e5e5e",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "on-tertiary-container": "#ffffff",
+              "on-primary-fixed": "#ffffff",
+              "on-error": "#ffffff",
+              "outline": "#777777",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#caeada",
+              "on-primary": "#e2e2e2",
+              "background": "#fcf9f8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 z-50 w-full bg-[#fcf9f8] dark:bg-zinc-950">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto font-['Inter'] antialiased tracking-tight">
+<div class="text-xl font-black tracking-tighter text-black dark:text-white">SolveIT</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Лента</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Создать</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Воздействие</a>
+<a class="text-black dark:text-white font-bold border-b-2 border-black dark:border-white pb-1" href="#">Профиль</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-medium active:scale-95 transition-transform">Добавить проблему</button>
+</div>
+</div>
+</header>
+<!-- Sidebar (Web only) -->
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-24 px-6 md:px-12 max-w-6xl mx-auto">
+<!-- Profile Header Section (Asymmetric Layout) -->
+<section class="mb-16 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<span class="label-md uppercase tracking-[0.1em] text-on-surface-variant font-bold text-[0.7rem] mb-4 block">Гражданский профиль</span>
+<h1 class="text-[3.5rem] font-black leading-none tracking-tighter mb-4">Александр Константинов</h1>
+<p class="text-on-surface-variant text-lg max-w-xl">Участник сообщества с 2023 года. Фокус на городском озеленении и безопасности пешеходных зон.</p>
+</div>
+<div class="md:col-span-4 flex md:justify-end">
+<div class="w-32 h-32 rounded-xl bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="professional portrait of a man in his 30s with a clean minimal aesthetic, soft studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrIhNiNPOvLfk1i_DKgrahrTMF9FZDZwukIjDwKsK6_64aQazt_usEhsS1hXVLPuswRPc8_uFivl9xzkr34QtXaAOTdM1ALOJS7K4Lw-NWPYOfk_OLV-d3dZAZ8VHLTXXlhqz1tpRi_VBsbr-DwRtAjQl2CLVj3O3dqSiXb3BHjbuY5HvPFtRKMPNlIQPHkrIrph9KvmmXA3ktUE5Tjyt7ZHL4QRZNmhZ2E08VL4W4OcTBgEMmlGKkB4bosqMlSUrZQc_95Xxcel0"/>
+</div>
+</div>
+</section>
+<!-- Bento Grid Contribution Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="campaign">campaign</span>
+<div>
+<div class="text-4xl font-black mb-1">12</div>
+<div class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">Опубликованные сигналы</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="volunteer_activism">volunteer_activism</span>
+<div>
+<div class="text-4xl font-black mb-1">84</div>
+<div class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">Поддержанные проблемы</div>
+</div>
+</div>
+<div class="bg-tertiary text-on-tertiary p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+<span class="material-symbols-outlined mb-4" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<div class="text-4xl font-black mb-1">08</div>
+<div class="text-sm font-bold uppercase tracking-wider opacity-80">Решенных вопросов</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Side: Activity List -->
+<div class="lg:col-span-8">
+<h3 class="text-2xl font-bold mb-8 tracking-tight">Последние сигналы</h3>
+<div class="space-y-6">
+<!-- Contribution Card 1 -->
+<div class="bg-surface-container-highest hover:bg-surface-container-high transition-colors p-6 rounded-xl group cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[0.65rem] font-bold uppercase tracking-widest">На рассмотрении</span>
+<span class="text-xs text-on-surface-variant font-medium">14 Октября, 2023</span>
+</div>
+<h4 class="text-xl font-bold mb-2 leading-snug group-hover:text-primary transition-colors">Отсутствие освещения в сквере им. Ломоносова</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">В вечернее время более 60% территории сквера остается в полной темноте. Требуется установка 12 дополнительных световых опор.</p>
+<div class="flex items-center gap-4 text-xs font-bold uppercase tracking-tighter">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="thumb_up">thumb_up</span> 142</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="chat_bubble">chat_bubble</span> 18</span>
+</div>
+</div>
+<!-- Contribution Card 2 -->
+<div class="bg-surface-container-highest hover:bg-surface-container-high transition-colors p-6 rounded-xl group cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[0.65rem] font-bold uppercase tracking-widest">Решено</span>
+<span class="text-xs text-on-surface-variant font-medium">02 Сентября, 2023</span>
+</div>
+<h4 class="text-xl font-bold mb-2 leading-snug">Стихийная свалка на ул. Береговой</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Мусор не вывозился более двух недель. После публикации сигнала городские службы провели полную очистку территории.</p>
+<div class="flex items-center gap-4 text-xs font-bold uppercase tracking-tighter">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="thumb_up">thumb_up</span> 89</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="chat_bubble">chat_bubble</span> 5</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Activity History Rail (Perspective Rail) -->
+<div class="lg:col-span-4 border-l border-outline-variant/20 pl-8">
+<h3 class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-8">История активности</h3>
+<div class="relative space-y-8 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant/30">
+<div class="relative pl-6">
+<div class="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-primary"></div>
+<p class="text-xs text-on-surface-variant font-bold mb-1">Сегодня, 10:24</p>
+<p class="text-sm leading-relaxed">Поддержал инициативу <span class="font-bold">«Велодорожка по ул. Мира»</span></p>
+</div>
+<div class="relative pl-6">
+<div class="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-outline"></div>
+<p class="text-xs text-on-surface-variant font-bold mb-1">Вчера, 18:45</p>
+<p class="text-sm leading-relaxed">Добавил комментарий к проблеме освещения в сквере</p>
+</div>
+<div class="relative pl-6">
+<div class="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-outline"></div>
+<p class="text-xs text-on-surface-variant font-bold mb-1">15 Октября</p>
+<p class="text-sm leading-relaxed">Сигнал <span class="font-bold">«Яма на перекрестке»</span> передан исполнителю</p>
+</div>
+<div class="relative pl-6">
+<div class="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-tertiary"></div>
+<p class="text-xs text-on-surface-variant font-bold mb-1">10 Октября</p>
+<p class="text-sm leading-relaxed">Проблема <span class="font-bold">«Свалка на Береговой»</span> отмечена как решенная</p>
+</div>
+</div>
+<!-- Secondary Actions -->
+<div class="mt-12 pt-12 border-t border-outline-variant/20">
+<button class="flex items-center gap-3 text-sm font-bold text-on-surface-variant hover:text-primary transition-colors w-full py-2">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+                        Настройки профиля
+                    </button>
+<button class="flex items-center gap-3 text-sm font-bold text-error hover:opacity-80 transition-colors w-full py-2 mt-2">
+<span class="material-symbols-outlined text-lg" data-icon="logout">logout</span>
+                        Выйти из системы
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container border-t-0 flex justify-around items-center py-3 px-6 z-50">
+<a class="flex flex-col items-center gap-1 text-zinc-600" href="#">
+<span class="material-symbols-outlined" data-icon="reorder">reorder</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Лента</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-600" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Создать</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-600" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Воздействие</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-black" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Профиль</span>
+</a>
+</nav>
+</body></html>

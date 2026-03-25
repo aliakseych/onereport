@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#304c41",
+              "on-error-container": "#410002",
+              "secondary-container": "#d6d4d3",
+              "secondary": "#5f5e5e",
+              "primary-fixed-dim": "#474747",
+              "inverse-on-surface": "#f3f0ef",
+              "surface-variant": "#e5e2e1",
+              "tertiary-fixed": "#486458",
+              "tertiary": "#254136",
+              "surface-dim": "#dcd9d9",
+              "on-secondary-container": "#1b1c1c",
+              "inverse-surface": "#313030",
+              "primary": "#000000",
+              "on-surface-variant": "#474747",
+              "error-container": "#ffdad6",
+              "surface-tint": "#5e5e5e",
+              "primary-container": "#3b3b3b",
+              "on-primary-container": "#ffffff",
+              "surface-container-low": "#f6f3f2",
+              "secondary-fixed-dim": "#acabab",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-container-highest": "#e5e2e1",
+              "surface-container": "#f0edec",
+              "on-tertiary-fixed": "#ffffff",
+              "secondary-fixed": "#c8c6c6",
+              "on-tertiary-fixed-variant": "#caeada",
+              "outline-variant": "#c6c6c6",
+              "error": "#ba1a1a",
+              "on-background": "#1c1b1b",
+              "surface-container-high": "#ebe7e7",
+              "surface-bright": "#fcf9f8",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#5e7b6e",
+              "surface": "#fcf9f8",
+              "on-surface": "#1c1b1b",
+              "inverse-primary": "#c6c6c6",
+              "primary-fixed": "#5e5e5e",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "on-tertiary-container": "#ffffff",
+              "on-primary-fixed": "#ffffff",
+              "on-error": "#ffffff",
+              "outline": "#777777",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#caeada",
+              "on-primary": "#e2e2e2",
+              "background": "#fcf9f8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #fcf9f8;
+            font-family: 'Inter', sans-serif;
+        }
+        .perspective-rail {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 2.75rem;
+        }
+        @media (max-width: 768px) {
+            .perspective-rail {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-on-surface antialiased">
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 z-50 w-full bg-[#fcf9f8] dark:bg-zinc-950 font-['Inter'] antialiased tracking-tight border-b border-outline-variant/10">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-black tracking-tighter text-black dark:text-white">SolveIT</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-black dark:text-white font-bold border-b-2 border-black dark:border-white pb-1 hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Лента</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Создать</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Воздействие</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Профиль</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg text-sm font-bold active:scale-95 transition-transform">
+                Добавить проблему
+            </button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="min-h-screen bg-surface p-12 pt-32">
+<div class="max-w-5xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<div class="flex justify-between items-end mb-8">
+<div>
+<span class="label-md text-[0.75rem] uppercase tracking-[0.15em] text-on-surface-variant font-bold mb-2 block">Гражданский мониторинг</span>
+<h2 class="text-[3.5rem] font-black tracking-tight leading-none text-primary">Общественная лента</h2>
+</div>
+<div class="flex items-center gap-4 bg-surface-container px-4 py-2 rounded-full border border-outline-variant/15">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-64 placeholder:text-outline" placeholder="Поиск по проблемам..." type="text"/>
+</div>
+</div>
+<!-- Category Filters -->
+<div class="flex gap-3 overflow-x-auto pb-4 no-scrollbar">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full text-sm font-semibold transition-all">Все</button>
+<button class="px-6 py-2 bg-surface-container-highest text-primary rounded-full text-sm font-medium hover:bg-surface-container-high transition-all">Инфраструктура</button>
+<button class="px-6 py-2 bg-surface-container-highest text-primary rounded-full text-sm font-medium hover:bg-surface-container-high transition-all">Безопасность</button>
+<button class="px-6 py-2 bg-surface-container-highest text-primary rounded-full text-sm font-medium hover:bg-surface-container-high transition-all">Экология</button>
+<button class="px-6 py-2 bg-surface-container-highest text-primary rounded-full text-sm font-medium hover:bg-surface-container-high transition-all">Транспорт</button>
+</div>
+</header>
+<!-- Feed Grid -->
+<div class="flex flex-col gap-12">
+<!-- Card 1: Asymmetric Layout (Perspective Rail) -->
+<article class="perspective-rail group">
+<div class="flex flex-col gap-4 text-sm text-on-surface-variant pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="event">event</span>
+<span>12 Октября, 2023</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Район Заречье</span>
+</div>
+<div class="mt-4">
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Высокий приоритет</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 hover:shadow-[0px_12px_32px_rgba(28,27,27,0.06)] transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-tertiary">Инфраструктура</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="thumb_up" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+                                128 подтверждений
+                            </div>
+</div>
+<h3 class="text-2xl font-bold mb-3 tracking-tight text-primary">Модернизация ливневой системы центрального парка</h3>
+<p class="text-on-surface-variant body-md leading-relaxed mb-8">Частые подтопления после дождей ограничивают доступ к рекреационным зонам. Требуется расширение стоков и замена фильтрующих элементов.</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of a young professional man with glasses in casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdHi_K76dYfQ3V2zxJ75vi-g2K9NaGgMGBf9yt7zOCBqlmj_KAxxyhbWua09rX5CvSOEGd_EnmL6C1AeF4Po2LWITpKZHhh48EuqhL6VqETOKO-jwIPRLW1gnFCl-BlsjVpphrApohl9Lc7QGdkLECmHA0yTm4lnbZjtnQMIXaqxruATd4zHSFEPNEP4SBFWDiDUeMMA73MCialqixmnJ9OLCs1jH5vJ-td3E5tTVrh6koePDSzcKMwTjlbi-c0T2N4-LzBK0PreY"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of a confident woman with short hair and a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA76jIRZLG2d6frF4_Nv0T4OjNgpWcyIUsDsxGmFcfFpeHOBQEuabbo9NPeNg-RDw6izdV8B1Ke3gfht6YHNfAmmFDQarK_LhUdgGGVOcRnH-Pf-YFdwgy8SYoTMZVhK2PLv9qGCQQXSbHwru6Lj_-1ttChPe-uA7ueqAjAeHTK82_nZNMlBGfti6lJGdVS2vzCSwFb8Qp1tUMuhMBBETamF5uIChK8dtwVQ7bq3IKITibnTjgZgDfe6P3U6R-GNJg0TDgc79gX09A"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of an older man with a grey beard and friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH9mPFiU2Yi1HlM2zaLaHrX9vkIaU_-8Xz6tnQssMccluvJJbyfmo2qWdjZP-mUDJWziYtUOklhet4Pc8XmhuYZgwuWtImrPOjpHRP21ES6sI_UobowU9sDyD4MAkxBKX_rzzRyHDkU70W5Wu5W2cJ5_qbLwQHCxKsH0uBpSHKwRaWxW7r9eFop-gVQUY64OtDbHr8xeaBz25DLYhGq9FdXbt-QqkZouz9oTPyFiMYURUFofS0uqyy4jlQfU4jsk1hOifu93_6QWQ"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface flex items-center justify-center text-[10px] font-bold">+125</div>
+</div>
+<button class="bg-tertiary text-on-tertiary px-8 py-3 rounded-lg font-bold text-sm hover:brightness-110 active:scale-95 transition-all">
+                                Поддержать
+                            </button>
+</div>
+</div>
+</article>
+<!-- Card 2: Asymmetric Layout -->
+<article class="perspective-rail group">
+<div class="flex flex-col gap-4 text-sm text-on-surface-variant pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="event">event</span>
+<span>10 Октября, 2023</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>ул. Ленина, 45</span>
+</div>
+<div class="mt-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Средний приоритет</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 hover:shadow-[0px_12px_32px_rgba(28,27,27,0.06)] transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-tertiary">Безопасность</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="thumb_up" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+                                84 подтверждения
+                            </div>
+</div>
+<h3 class="text-2xl font-bold mb-3 tracking-tight text-primary">Установка освещения в слепой зоне пешеходного перехода</h3>
+<p class="text-on-surface-variant body-md leading-relaxed mb-8">Отсутствие фонарей у школы №12 создает опасные условия для детей в вечернее время. Необходимы дополнительные LED-прожекторы.</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of a young woman with curly hair and professional business look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_cu182mcR5S7HQuCYtdpfgKv_V-7uZnhj17tBW-hnqE452DHdWUO09_yN2oKjDrDloc5YY_urIgT97ZlNUNbvpkdL6eTDVIrmDojthHo-Z5TAVGHEAv1pn303NgczFUUhc5tcOvEfwC9Rc6-HuyPYjO6vS_aroWTOEv9r4jNbKb8i1deafIfHqFRTsYd3v6SQ-aGdRBOAPzxO29DQ7r1AZnlA5UBkwfPmSYcsWnGzMMcdpkVojXxN_FTXXWLQPcn-TAzo5sSKN9g"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of a man with a clean shave and a thoughtful expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQVUJD7xdblp-xQR5rf5iyGq766E8gcW5hrHG5EmaNFlE7nA5ZZj803Ox_Jv27Sza-MSxH5ClVthUvdapKIydgQmEGVVz8rWx8CnjY825Bi_-B21Vpwkrw00zQkpcWWdG0rgxZ_7iQWyQmhh14hgn82k5DspYh_yvj_M6fYuTOEHHxS7jhprSOauZkBDeAjjFUMtrolfgDduHyDUaSv7azdVkNnlRHJTLU5Y5b5RkghKFahGz14xODtmBZYjCUInguSt7crNXj3fE"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface flex items-center justify-center text-[10px] font-bold">+82</div>
+</div>
+<button class="bg-tertiary text-on-tertiary px-8 py-3 rounded-lg font-bold text-sm hover:brightness-110 active:scale-95 transition-all">
+                                Поддержать
+                            </button>
+</div>
+</div>
+</article>
+<!-- Card 3: Bento Style Highlight -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<article class="bg-surface-container p-8 rounded-xl border border-outline-variant/15">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Экология</span>
+<span class="material-symbols-outlined text-primary/40" data-icon="eco">eco</span>
+</div>
+<h3 class="text-xl font-bold mb-2 tracking-tight">Раздельный сбор в ЖК "Олимп"</h3>
+<p class="text-on-surface-variant text-sm mb-6">Необходимо расширение площадки для сбора пластика и бумаги в связи с переполненностью текущих контейнеров.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs font-bold text-primary">45 Поддержали</span>
+<button class="text-primary text-sm font-black border-b-2 border-primary pb-0.5 hover:opacity-70 transition-opacity">Детали</button>
+</div>
+</article>
+<article class="bg-surface-container p-8 rounded-xl border border-outline-variant/15">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Транспорт</span>
+<span class="material-symbols-outlined text-primary/40" data-icon="directions_bus">directions_bus</span>
+</div>
+<h3 class="text-xl font-bold mb-2 tracking-tight">Новая остановка на ул. Мира</h3>
+<p class="text-on-surface-variant text-sm mb-6">Жители крайних домов вынуждены идти более 1.5 км до ближайшего транспорта. Требуется перенос или новая точка.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs font-bold text-primary">212 Поддержали</span>
+<button class="text-primary text-sm font-black border-b-2 border-primary pb-0.5 hover:opacity-70 transition-opacity">Детали</button>
+</div>
+</article>
+</div>
+<!-- Card 4: Asymmetric Layout -->
+<article class="perspective-rail group">
+<div class="flex flex-col gap-4 text-sm text-on-surface-variant pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="event">event</span>
+<span>8 Октября, 2023</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span>Лесопарк "Северный"</span>
+</div>
+<div class="mt-4">
+<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Решается</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/5 rounded-full -mr-16 -mt-16"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-tertiary">Экология</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                В работе у администрации
+                            </div>
+</div>
+<h3 class="text-2xl font-bold mb-3 tracking-tight text-primary">Очистка водоема от стихийных свалок</h3>
+<p class="text-on-surface-variant body-md leading-relaxed mb-8">Выявлено 4 крупных очага загрязнения береговой линии. Необходим организованный вывоз мусора и установка камер.</p>
+<div class="flex items-center justify-between relative z-10">
+<div class="flex -space-x-2">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of a young woman with glasses and a creative style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmOV_s138BjcATdXbcqC5xYc-RBkdrCUsUaguTLlEpJ_QXVq9NDihKnyJzLtwbYbhW_QyASdIPaldc1K8zAf-NNaRuTpfqfGXR7hKeA-QLfBaQ5l1wegSrovLk5U3JHlHyfP-fneWXqDEtBzekPfV6a90TDo_bW4lO2JIlqxcQziJ9PTQ269i-Is_YC0EodzZDpEzmpZaDccQMurzAvsz42zgstS-ghTAZhh-H2Q4v45Aexgx8Bvwy1580IZxmbn5EE7Fel6CLJWY"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of an athletic man with a short haircut looking determined" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA35tUQxTp9I0mC7ItoSzIgG8jZM7rpiXoAnxrmUlszMk2W2lD0tHjciRzrqPIH6Qhitx3B9bNuFjdukmc7uC84dnMcGVEK-NJcOiHKCNxh655CH0aAX_mRgBP59Q_rp_vwjiiuFKWadKQsRqns-7eiPqtD-r700ekChKLsH-albPM3tpqhNOI6QFWfMwwZSD3w3QcIZTcfR3HctZ_MnWgq91r2pza9yoTg__LlQh0lQcNiJ00K3_IAjCtX1ropGDahP777EGOnpJc"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface flex items-center justify-center text-[10px] font-bold">+56</div>
+</div>
+<button class="bg-surface-container-highest text-primary px-8 py-3 rounded-lg font-bold text-sm hover:bg-surface-container-high active:scale-95 transition-all">
+                                Прогресс
+                            </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination or Load More -->
+<div class="mt-20 flex justify-center">
+<button class="flex items-center gap-3 px-10 py-4 border border-outline text-primary font-bold rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<span>Показать больше проблем</span>
+<span class="material-symbols-outlined" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button for Mobile Context -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center md:hidden z-[60] active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>

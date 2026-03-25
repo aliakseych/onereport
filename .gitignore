@@ -1,5 +1,15 @@
-# some basic python gitignore stuff
+# Local environment
 .env
+.env.*
+!.env.example
+
+# Editor and OS files
 .idea
 .DS_Store
-*.pyc
+.vite
+deps
+
+# Frontend local files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
