@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onereport.uz</title>
+    <style>
+        /* General page setup */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #212832;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* The main message bubble/card container */
+        .card {
+            background-color: #4b6a93;
+            border-radius: 18px;
+            max-width: 480px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* White header area for the logo */
+        .card-header {
+            background-color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Styling for the Logo image to fit its container */
+        .card-header img {
+            max-width: 100%; /* Prevents image from overflowing the card */
+            height: auto;    /* Maintains aspect ratio */
+            display: inline-block; /* Removes dynamic font alignment spacing */
+            border: 0;
+        }
+
+        /* Text-based Logo styling - commented out in your version, but kept here for context */
+        .logo {
+            font-size: 46px;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -1.5px;
+        }
+
+        /* Body content area */
+        .card-body {
+            padding: 24px;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.45;
+        }
+
+        .card-body p {
+            margin-top: 0;
+            margin-bottom: 22px;
+        }
+
+        /* Styling for the links */
+        .card-body a {
+            color: #92bcf0;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+
+        .card-body a:hover {
+            text-decoration: none;
+        }
+
+        .footer-text {
+            margin-bottom: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <h1 class="logo">
+                <img src="banner.png" alt="onereport.uz logo">
+            </h1>
+        </div>
+
+        <div class="card-body">
+            <p>onereport.uz - социальный сервис, который поможет <strong>проще и
+                быстрее решать свои проблемы при обращении в госорганы</strong></p>
+
+            <p>Поделитесь Вашим опытом и пожеланиями на улучшения процесса работы с госорганами при обращениях - чтобы мы смогли добавить внедрять нужный функционал. <strong>Это можно сделать через опрос, который займет менее 5 минут</strong></p>
+
+            <p><a href="https://forms.gle/ittURDryd3MC392cA" target="_blank">https://forms.gle/ittURDryd3MC392cA</a></p>
+
+            <p class="footer-text">Спасибо за сотрудничество!</p>
+        </div>
+    </div>
+
+</body>
+</html>
